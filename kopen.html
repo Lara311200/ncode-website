@@ -46,7 +46,7 @@
 <div class="clear"></div>
 
 <a href="Workshop.html" class="kopenknop">Annuleren</a>
-<a href="/download/ReadySetCode.zip" class="kopenknop" id="downloaden" download="ReadySetCode.zip">Afronden</a>
+<a href="#" class="kopenknop" id="downloaden">Afronden</a>
 <div id="dialog" title="Afronden">
     <p3>Download begint nu!</p3>
     <div class="clear"></div>
@@ -117,12 +117,16 @@ $(function() {
     }
     });
   
-    // next add the onclick handler
     $("#downloaden").click(function() {
       $("#dialog").dialog("open");
       return false;
     });
   });
+    
+    $('#downloaden').click(function(e) {
+    e.preventDefault(); 
+    window.location.href = 'download/ReadySetCode.zip';
+});
 </script>
 </body>
 </html>
